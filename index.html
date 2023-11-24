@@ -47,8 +47,18 @@
             color: #a40a0a;
             margin-top: 10px;
             font-style: italic;
+            
+        }
+        
+        .center-wrapper {
+            display: inline-block;
         }
 
+        img {
+            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+        
         .submit-review-form {
             margin-top: 20px;
         }
@@ -88,6 +98,7 @@
     <div class="review-container">
         <div class="review-header">Great Movie!</div>
         <div class="review-rating">84%</div>
+        <div class="center-wrapper">
         <div class="review-content">
             <img src="thehex.jpg" alt="The Hex">
             <p>This movie exceeded my expectations. It's high quality and worth every minute of watching</p>
