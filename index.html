@@ -81,6 +81,24 @@
             max-height: 100%;
             margin: 5px;
         }
+
+        .icon-with-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .icon-with-text i {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 5px;
+        }
+
+        .icon-with-text span {
+            display: inline-block;
+            vertical-align: middle;
+        }
         
     </style>
 </head>
@@ -91,6 +109,11 @@
 
     <div class="review-container">
         <div class="review-header">The Hex is a Great Movie!</div>
+        <div class="icon-with-text">
+        <i class="fa-sharp fa-light fa-circle" style="color: #b1c400;"></i>
+        <span>78%</span>
+    </div>
+
         <div class="review-rating">78%</div>
         <div class="review-content">
         <div class="review-images">
