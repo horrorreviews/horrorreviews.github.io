@@ -144,31 +144,11 @@
             <div/>
 <div/>
             
-            <!-- Dropdown for selecting videos -->
-<select id="videoDropdown" onchange="changeVideo()">
-    <option value="https://mega.nz/embed/ZWc3QLSa#RxY_yf7H4uLlpN24uQiiTam65Bwf2C4bEkRI1GX3McQ">Video 1</option>
-    <option value="https://mega.nz/embed/ZWc3QLSa#RxY_yf7H4uLlpN24uQiiTam65Bwf2C4bEkRI1GX3McQ">Video 2</option>
-    <option value="https://mega.nz/embed/ZWc3QLSa#RxY_yf7H4uLlpN24uQiiTam65Bwf2C4bEkRI1GX3McQ">Video 3</option>
-    <!-- Add more options as needed -->
-</select>
-
 <!-- Embedded video container -->
 <div id="videoContainer">
     <!-- Default video (replace with the default video you want to show) -->
     <iframe width="560" height="315" src="https://mega.nz/embed/ZWc3QLSa#RxY_yf7H4uLlpN24uQiiTam65Bwf2C4bEkRI1GX3McQ" allowfullscreen ></iframe> 
 </div>
-
-<script>
-    // Function to change the video based on the selected option
-    function changeVideo() {
-        var dropdown = document.getElementById("videoDropdown");
-        var selectedOption = dropdown.options[dropdown.selectedIndex].value;
-        var videoContainer = document.getElementById("videoContainer");
-
-        // Set the source of the embedded video to the selected option
-        videoContainer.innerHTML = '<iframe width="560" height="315" src="' + selectedOption + '" frameborder="0" allowfullscreen></iframe>';
-    }
-</script>
 
 </body>
 
