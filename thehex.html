@@ -99,7 +99,26 @@
             display: inline-block;
             vertical-align: middle;
         }
+
         
+        .like-image {
+            cursor: pointer;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .like-count {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+         .image-container {
+            display: flex; /* Use flexbox to create a horizontal layout */
+            justify-content: space-between; /* Adjust as needed: space-around, space-evenly, etc. */
+            align-items: center; /* Align items vertically at the center */
+            margin: 20px; /* Add some margin for spacing */
+        }
+
     </style>
 </head>
 
@@ -121,10 +140,36 @@
             <p>Dilanne is trying to uncover the truth about her mother's murder as she travels to South Africa in search of answers. The British girl discovers sinister things about a hex placed on her family. Great amateur horror movie. Nice little plot twist at the end. Jumpscares, blood, Witchcraft, It's nice !</p>
         </div>
         <div class="reviewer-info">- SMV</div>
-        <div class="review-images">
-            <a href="https://mega.nz/file/AfVkUYbL#bOXQFKxuADSBY-kIBeuZXxjSknefkxEpMKwr7g568X4">
-                <img src="download.png" alt="Stream or Download">
-            </a>
-    </div>
+        <div class="image-container">
+            <div class="review-images">
+                <a href="https://mega.nz/file/AfVkUYbL#bOXQFKxuADSBY-kIBeuZXxjSknefkxEpMKwr7g568X4">
+                    <img src="download.png" alt="Stream or Download">
+                </a>
+            <div id="like-container">
+                <img class="like-image" src="like.png" alt="Like" onclick="like()">
+                <div class="like-count" id="like-count">0</div>
+            </div>
+
+            <script>
+        // Function to handle like button click
+        function like() {
+            // Retrieve the current like count from local storage or default to 0
+            let currentLikes = localStorage.getItem('likes') || 0;
+
+            // Increment the like count
+            currentLikes++;
+
+            // Update the like count in local storage
+            localStorage.setItem('likes', currentLikes);
+
+            // Update the like count in the HTML
+            document.getElementById('like-count').textContent = currentLikes;
+        }
+
+        // Display the initial like count on page load
+        document.getElementById('like-count').textContent = localStorage.getItem('likes') || 0;
+</script>
 
 </body>
+
+</html>
