@@ -145,30 +145,6 @@
                     <img src="download.png" alt="Stream or Download">
                 </a>
         <div/>
-        <div id="like-container">
-            <img class="like-image" src="likebutton.png" alt="Like" onclick="like()">
-            <div class="like-count" id="like-count">0</div>
-        </div>
-
-            <script>
-        // Function to handle like button click
-        function like() {
-            // Retrieve the current like count from local storage or default to 0
-            let currentLikes = localStorage.getItem('likes') || 0;
-
-            // Increment the like count
-            currentLikes++;
-
-            // Update the like count in local storage
-            localStorage.setItem('likes', currentLikes);
-
-            // Update the like count in the HTML
-            document.getElementById('like-count').textContent = currentLikes;
-        }
-
-        // Display the initial like count on page load
-        document.getElementById('like-count').textContent = localStorage.getItem('likes') || 0;
-</script>
 
 </body>
 
